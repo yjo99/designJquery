@@ -5,9 +5,6 @@ function showList(){
 $(document).ready(function () {
     showList();
 
- 
-
-
 //on click save button 
 $("#split").click (function(){
     
