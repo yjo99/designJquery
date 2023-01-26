@@ -16,7 +16,7 @@
         <section data-role="page" id="contactList">
             <!-- Header -->
             <header data-role="header">
-                <a href="#newContact" data-icon="plus">Add</a>
+                <a href="#newContact" data-icon="plus" id="Add">Add</a>
                 <h1>Contact List</h1>
             </header>
             <!-- Content -->
@@ -39,8 +39,8 @@
                 <h1>Person</h1>
             </header>
             <article data-role="content">
-                <section style="border: 1px solid; width: 40%; ">
-                    <img src="assets/img/male.png" style="width: 200px; height: 20%;"><br>
+                <section style="border: 1px solid; width: 40%;">
+                    <img  style="width: 200px; height: 20%;" id="imgDel"><br>
                     <a href="#deleteContact" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext" id="deleteBtn"
                         data-rel="dialog"> </a>
                     <a href="#newContact" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-notext" id="editBtn"></a>
@@ -71,7 +71,7 @@
                 <h3>New Contact</h3>
             </header>
             <article data-role="content">
-                <form>
+                <form id="form1">
                     <div><label for="text-basic">Name:</label><input type="text" name="nameInput" id="nameInput"
                             value="" required></div>
                     <div><label>Phone:</label> <input type="number" name="numberInput" pattern="[+20][1-9]{9}"
@@ -80,13 +80,16 @@
                     <div class="ui-field-contain">
                         <label for="slider-flip-m">Gender:</label>
                         <select name="slider-flip-m" id="slider-flip-m" data-role="slider">
-                            <option value="male" selected>Male</option>
-                            <option value="female">Female</option>
+                            <option value="MALE" selected>Male</option>
+                            <option value="FEMALE">Female</option>
                         </select>
+                    </div>
+                    <div hidden>
+                        <input type="text" value="1" id="isAdd">
                     </div>
                     <fieldset data-role="controlgroup" data-type="horizontal">
                         <input type="button" id="save" data-icon="check" value="save">
-                        <button data-icon="forbidden" id="cancle">Cancle</button>
+                        <input type="button" data-icon="forbidden" id="cancle" value="Cancle">
                     </fieldset>
                 </form>
             </article>
